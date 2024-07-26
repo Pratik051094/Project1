@@ -31,4 +31,7 @@ public class CreateApplicationPage1 extends DropDown {
 	@FindBy(xpath = "//button[text()='Back']")
 	public WebElement Backbutton;
 
+	public void Tenure(String months){
+		DrpDnAccess("Tenure (Months)", months);
+	}
 }

@@ -49,4 +49,16 @@ public class CreateApplicationPage4 extends DropDown {
 
 	@FindBy(xpath = "//button[text()='Run POSIDEX']")
 	public WebElement RunPOSIDEXbutton;
+
+	public void Document(String doc){
+		DrpDnAccess("Document",doc);
+	}
+
+	public void Gender(String gender){
+		DrpDnAccess("Gender",gender);
+	}
+
+	public void Marital(String mar){
+		DrpDnAccess("Marital Status",mar);
+	}
 }

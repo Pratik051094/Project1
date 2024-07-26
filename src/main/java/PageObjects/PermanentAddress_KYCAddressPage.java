@@ -1,6 +1,8 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -51,4 +53,20 @@ public class PermanentAddress_KYCAddressPage extends DropDown {
 
 	@FindBy(xpath = "(//button[@class=\"slds-button slds-button_brand\"])")
 	private WebDriver snp;
+
+	public void KYCAddress(String add){
+		DrpDnAccess("Type of Address Proof", add);
+	}
+
+	public void CurrentAdd(String cadd) {
+		driver.findElement(By.xpath("(//button[@aria-label='Select Address'])[2]")).click();
+		WebElement we = driver.findElement(By.xpath("(//div[@aria-label='Select Address'])[2]"));
+		we.findElement(By.xpath("//*[@data-value='"+cadd+"']")).click();
+	}
+
+	public void CommunicationAdd(String commAdd) {
+		driver.findElement(By.xpath("(//button[@aria-label='Select Address'])[3]")).click();
+		WebElement we = driver.findElement(By.xpath("(//div[@aria-label='Select Address'])[3]"));
+		we.findElement(By.xpath("//*[@data-value='"+commAdd+"']")).click();
+	}
 }
