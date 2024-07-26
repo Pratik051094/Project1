@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SocioEconomicDetails {
+public class SocioEconomicDetails extends DropDown {
 	WebDriver driver;
 
 	SocioEconomicDetails(WebDriver driver) {

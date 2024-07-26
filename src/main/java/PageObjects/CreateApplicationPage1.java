@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CreateApplicationPage1 {
+public class CreateApplicationPage1 extends DropDown {
 	WebDriver driver;
 
 	CreateApplicationPage1(WebDriver driver) {
