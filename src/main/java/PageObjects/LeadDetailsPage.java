@@ -24,5 +24,15 @@ public class LeadDetailsPage extends DropDown {
 	@FindBy(xpath = "//button[@class='slds-button slds-button_brand']")
 	private WebDriver snp;
 
-	
+	public void ProductName(String name){
+		DrpDnAccess("Product Name", name);
+	}
+
+	public void LeadSource(String lead){
+		DrpDnAccess("Lead Source", lead);
+	}
+
+	public void LeadDisposition(String disp){
+		DrpDnAccess("Lead Disposition", disp);
+	}
 }
