@@ -7,21 +7,28 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-	WebDriver driver;
+	public WebDriver driver;
 
-	LoginPage(WebDriver driver) {
+	public LoginPage(WebDriver driver) {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "username")
+	@FindBy(xpath="//input[@name='username']")
 	private WebElement usernameInput;
 
-	@FindBy(id = "password")
+	@FindBy(xpath="//input[@name='pw']")
 	private WebElement passwordInput;
 
-	@FindBy(id = "Login")
+	@FindBy(xpath="//input[@name='Login']")
 	private WebElement loginButton;
+	
+	
+	public void LoginIntoApp() {
+		usernameInput.sendKeys("unnati.mokal@rblbank.com.uat");	
+		passwordInput.sendKeys("Unnati@1234");
+		loginButton.click();
+		}
 
 }
