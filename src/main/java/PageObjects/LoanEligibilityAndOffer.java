@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoanEligibilityAndOffer {
+public class LoanEligibilityAndOffer extends DropDown {
 	WebDriver driver;
 
 	LoanEligibilityAndOffer(WebDriver driver) {
