@@ -7,19 +7,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
+import PageObjects.CreateLeadPage;
 import PageObjects.LoginPage;
 import TestComponent.BaseClass;
 
 public class TestClass1 extends BaseClass {
 
-	@Test
-	public void Test1() throws IOException, InterruptedException {
+	@Test(priority = 1)
+	public void Test1() throws Exception {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.LoginIntoApp();
-		WebElement con = driver.findElement(By.xpath("//div[@data-aura-class=\"forceInlineEditGrid\"]"));
-		EventFiringWebDriver ED = new EventFiringWebDriver(driver);
-		ED.executeScript("document.querySelector('//div[@data-aura-class=\\\"forceInlineEditGrid\\\"]').scrollTop=500");
+		}
+
+	@Test(priority = 2)
+	public void LeadPageAccess(){
+		CreateLeadPage clp = new CreateLeadPage(driver);
+		clp.CreateLead();
 	}
 
 }
