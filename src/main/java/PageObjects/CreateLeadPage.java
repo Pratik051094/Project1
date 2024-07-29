@@ -15,7 +15,7 @@ public class CreateLeadPage extends DropDown {
 
 	public CreateLeadPage(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 

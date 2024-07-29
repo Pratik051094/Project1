@@ -6,7 +6,11 @@ import org.openqa.selenium.WebElement;
 
 public class DropDown {
 
-	WebDriver driver;
+	private WebDriver driver;
+	
+	public DropDown(WebDriver driver) {
+        this.driver = driver;
+    }
 
 	public void DrpDnAccess(String arialabel, String dataVal) {
 		driver.findElement(By.xpath("//button[@aria-label='"+arialabel+"']")).click();

@@ -10,7 +10,7 @@ public class CreateApplicationPage4 extends DropDown {
 	WebDriver driver;
 
 	CreateApplicationPage4(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 

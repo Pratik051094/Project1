@@ -9,7 +9,7 @@ public class SocioEconomicDetails extends DropDown {
 
 	SocioEconomicDetails(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 

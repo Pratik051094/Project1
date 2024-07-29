@@ -11,7 +11,7 @@ public class LeadDetailsPage extends DropDown {
 
 	public LeadDetailsPage(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 

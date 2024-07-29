@@ -12,7 +12,7 @@ public class PermanentAddress_KYCAddressPage extends DropDown {
 
 	PermanentAddress_KYCAddressPage(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 //	@FindBy(xpath="(//button[@name=\"permanentAddress\"])")

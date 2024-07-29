@@ -10,7 +10,7 @@ public class AssetDetails extends DropDown {
 
 	AssetDetails(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 
