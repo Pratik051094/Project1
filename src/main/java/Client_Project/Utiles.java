@@ -40,10 +40,18 @@ public class Utiles {
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
 
-	public void ScrollParent(String elm){
-		WebElement element = driver.findElement(By.xpath(elm));
+	public void ScrollParent(String xpath){
+		WebElement element = driver.findElement(By.xpath(xpath));
 		
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public void ScrollContainer(String xpath){
+		WebElement element = driver.findElement(By.xpath("(//section)[2]"));
+		WebElement elm = element.findElement(By.xpath(xpath));
+		
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", elm);
 	}
 }
