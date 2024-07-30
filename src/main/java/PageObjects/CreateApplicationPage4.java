@@ -9,7 +9,7 @@ public class CreateApplicationPage4 extends DropDown {
 
 	WebDriver driver;
 
-	CreateApplicationPage4(WebDriver driver) {
+	public CreateApplicationPage4(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
@@ -50,6 +50,12 @@ public class CreateApplicationPage4 extends DropDown {
 	@FindBy(xpath = "//button[text()='Run POSIDEX']")
 	public WebElement RunPOSIDEXbutton;
 
+	@FindBy(xpath = "(//input[@class='slds-input'])[6]")
+	public WebElement mother;
+
+	@FindBy(xpath = "//button[text()='Save & Next']")
+	public WebElement Saveandnextbutton;
+
 	public void Document(String doc){
 		DrpDnAccess("Document",doc);
 	}
@@ -60,5 +66,18 @@ public class CreateApplicationPage4 extends DropDown {
 
 	public void Marital(String mar){
 		DrpDnAccess("Marital Status",mar);
+	}
+
+	public void Createapp4(){
+		BioMetricKYCYesButton.click();
+		DocumentDropedown.click();
+		DocumentImageFront.click();
+		// autoIT //pratik ??
+		EnterAadhaarNumberField.sendKeys("0129876543");
+		VerifyButton.click();
+		Marital("Married");
+		Gender("Male");
+		mother.sendKeys("testmother");
+		Saveandnextbutton.click();
 	}
 }

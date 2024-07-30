@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 
 import PageObjects.CreateApplicationPage1;
 import PageObjects.CreateApplicationPage2;
+import PageObjects.CreateApplicationPage3;
+import PageObjects.CreateApplicationPage4;
 import PageObjects.CreateLeadPage;
 import PageObjects.LeadActions;
 import PageObjects.LeadDetailsPage;
@@ -52,5 +54,17 @@ public class TestClass1 extends BaseClass {
 	public void CreateApp2(){
 		CreateApplicationPage2 cap2 = new CreateApplicationPage2(driver);
 		cap2.Createapp2();
+	}
+
+	@Test(priority = 7)
+	public void CreateApp3(){
+		CreateApplicationPage3 cap3 = new CreateApplicationPage3(driver);
+		cap3.Creatapp3();
+	}
+
+	@Test(priority = 8)
+	public void CreateApp4(){
+		CreateApplicationPage4 cap4 = new CreateApplicationPage4(driver);
+		cap4.Createapp4();
 	}
 }

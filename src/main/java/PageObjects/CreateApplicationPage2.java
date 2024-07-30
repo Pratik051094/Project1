@@ -35,6 +35,9 @@ public class CreateApplicationPage2 extends DropDown {
 	@FindBy(xpath = "//button[text()='Run POSIDEX']")
 	public WebElement RunPOSIDEXButton;
 
+	@FindBy(xpath = "//button[text()='Save & Next']")
+	public WebElement Saveandnextbutton;
+
 	public void CustoType(String ctype){
 		DrpDnAccess("Customer Category",ctype);
 	}
@@ -60,5 +63,6 @@ public class CreateApplicationPage2 extends DropDown {
 		NoRadioButton.click();
 		// Imageupload ??
 		RunPOSIDEXButton.click();
+		Saveandnextbutton.click();
 	}
 }
