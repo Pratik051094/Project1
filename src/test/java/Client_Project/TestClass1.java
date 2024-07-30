@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import PageObjects.CreateApplicationPage1;
 import PageObjects.CreateApplicationPage2;
 import PageObjects.CreateLeadPage;
+import PageObjects.LeadActions;
 import PageObjects.LeadDetailsPage;
 import PageObjects.LoginPage;
 import TestComponent.BaseClass;
@@ -37,7 +38,8 @@ public class TestClass1 extends BaseClass {
 
 	@Test(priority = 4)
 	public void ConvertToApplication(){
-
+		LeadActions la = new LeadActions(driver);
+		la.ConvApp();
 	}
 
 	@Test(priority = 5)

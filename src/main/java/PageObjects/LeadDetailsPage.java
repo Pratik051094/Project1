@@ -51,6 +51,7 @@ public class LeadDetailsPage extends DropDown {
 		mobile.sendKeys("1234567899");
 		pinCode.sendKeys("400064");
 		LeadSource("Dealer");
+		ScrollContainer("//button[@aria-label='Lead Disposition']");
 		LeadDisposition("Interested");
 		snp.click();
 	}
