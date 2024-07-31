@@ -11,7 +11,7 @@ public class LoginPage extends DropDown {
 
 	public LoginPage(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 

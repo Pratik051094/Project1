@@ -6,6 +6,7 @@ import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,10 +21,10 @@ public class Utiles {
 		this.driver = driver;
 	}
 
-	public WebElement waitForElementToAppear(By ele) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(ele));
-	}
+	public static WebElement waitForElementToAppear(WebDriver driver, By locator, Duration i) {
+        WebDriverWait wait = new WebDriverWait(driver, i);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
 	
 	public void AutoItFileUpload() throws IOException {
 		Runtime.getRuntime().exec(
@@ -39,4 +40,18 @@ public class Utiles {
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
 
+	public void ScrollParent(String xpath){
+		WebElement element = driver.findElement(By.xpath(xpath));
+		
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public void ScrollContainer(String xpath){
+		WebElement element = driver.findElement(By.xpath("(//section)[2]"));
+		WebElement elm = element.findElement(By.xpath(xpath));
+		
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", elm);
+	}
 }

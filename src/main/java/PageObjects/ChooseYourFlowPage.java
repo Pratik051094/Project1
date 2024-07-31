@@ -11,7 +11,7 @@ public class ChooseYourFlowPage extends DropDown {
 
 	ChooseYourFlowPage(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 

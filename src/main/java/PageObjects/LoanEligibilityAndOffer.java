@@ -9,7 +9,7 @@ public class LoanEligibilityAndOffer extends DropDown {
 
 	LoanEligibilityAndOffer(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 

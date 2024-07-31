@@ -10,7 +10,7 @@ public class AssetDetails extends DropDown {
 
 	AssetDetails(WebDriver driver) {
 
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -41,4 +41,19 @@ public class AssetDetails extends DropDown {
 	@FindBy(xpath = "(//input[@class='slds-input'])[8]")
 	public WebElement OtherRegistrationChargesField;
 
+	public void Manufacturer(String bike){
+		DrpDnAccess("Two Wheeler Manufacturer", bike);
+	}
+
+	public void Type(String typ){
+		DrpDnAccess( "Two Wheeler Type", typ);
+	}
+
+	public void Model(String model){
+		DrpDnAccess("Model",model);
+	}
+
+	public void Variant(String var){
+		DrpDnAccess("Variant", var);
+	}
 }

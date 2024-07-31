@@ -9,8 +9,8 @@ public class CreateApplicationPage2 extends DropDown {
 
 	WebDriver driver;
 
-	CreateApplicationPage2(WebDriver driver) {
-		this.driver = driver;
+	public CreateApplicationPage2(WebDriver driver) {
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -34,4 +34,35 @@ public class CreateApplicationPage2 extends DropDown {
 
 	@FindBy(xpath = "//button[text()='Run POSIDEX']")
 	public WebElement RunPOSIDEXButton;
+
+	@FindBy(xpath = "//button[text()='Save & Next']")
+	public WebElement Saveandnextbutton;
+
+	public void CustoType(String ctype){
+		DrpDnAccess("Customer Category",ctype);
+	}
+
+	public void Profession(String prof){
+		DrpDnAccess("Type of Profession", prof);
+	}
+
+	public void Title(String title){
+		DrpDnAccess("Title", title);
+	}
+
+	public void CustoCategory(String cat){
+		DrpDnAccess("Customer Category", cat);
+	}
+
+	public void Createapp2(){
+		CustoType("Inividual");
+		CustoCategory("Salaried");
+		Profession("Indiviual Cash salaried");
+		Title("Mr.");
+		DateofBirthField.sendKeys("22-Jul-1990");
+		NoRadioButton.click();
+		// Imageupload ??
+		RunPOSIDEXButton.click();
+		Saveandnextbutton.click();
+	}
 }
