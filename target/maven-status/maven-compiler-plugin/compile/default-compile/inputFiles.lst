@@ -1,4 +1,5 @@
 /workspaces/Project1/src/main/java/PageObjects/LoanEligibilityAndOffer.java
+/workspaces/Project1/src/main/java/PageObjects/LeadActions.java
 /workspaces/Project1/src/main/java/PageObjects/ChooseYourFlowPage.java
 /workspaces/Project1/src/main/java/PageObjects/CreateApplicationPage1.java
 /workspaces/Project1/src/main/java/PageObjects/LeadDetailsPage.java
@@ -11,3 +12,4 @@
 /workspaces/Project1/src/main/java/PageObjects/PermanentAddress_KYCAddressPage.java
 /workspaces/Project1/src/main/java/PageObjects/SocioEconomicDetails.java
 /workspaces/Project1/src/main/java/PageObjects/CreateApplicationPage4.java
+/workspaces/Project1/src/main/java/Client_Project/Utiles.java
