@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
+import PageObjects.ChooseYourFlowPage;
 import PageObjects.CreateApplicationPage1;
 import PageObjects.CreateApplicationPage2;
 import PageObjects.CreateApplicationPage3;
@@ -66,5 +67,11 @@ public class TestClass1 extends BaseClass {
 	public void CreateApp4(){
 		CreateApplicationPage4 cap4 = new CreateApplicationPage4(driver);
 		cap4.Createapp4();
+	}
+
+	@Test(priority = 9)
+	public void Flowpage(){
+		ChooseYourFlowPage cyf = new ChooseYourFlowPage(driver);
+		cyf.FlowPage();
 	}
 }

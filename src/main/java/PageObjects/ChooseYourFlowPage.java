@@ -9,7 +9,7 @@ public class ChooseYourFlowPage extends DropDown {
 
 	WebDriver driver;
 
-	ChooseYourFlowPage(WebDriver driver) {
+	public ChooseYourFlowPage(WebDriver driver) {
 
 		super(driver);
 		PageFactory.initElements(driver, this);
@@ -24,4 +24,8 @@ public class ChooseYourFlowPage extends DropDown {
 	@FindBy(xpath = "//button[text()='Proceed']")
 	public WebElement ProceedButton;
 
+	public void FlowPage(){
+		NoButton.click();
+		ProceedButton.click();
+	}
 }
