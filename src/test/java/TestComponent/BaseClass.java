@@ -59,7 +59,7 @@ public class BaseClass {
 				"https://rvfrblbank--closuat.sandbox.my.site.com/login?ec=302&startURL=%2Fs%2Fclos-lead%2FCLOS_Lead__c%2FDefault");
 	}
 	
-	//@AfterMethod(alwaysRun = true)
+	//AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		driver.close();
 	}

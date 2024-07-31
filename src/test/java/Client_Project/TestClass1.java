@@ -18,8 +18,7 @@ public class TestClass1 extends BaseClass {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.LoginIntoApp();
 		WebElement con = driver.findElement(By.xpath("//div[@data-aura-class=\"forceInlineEditGrid\"]"));
-		EventFiringWebDriver ED = new EventFiringWebDriver(driver);
-		ED.executeScript("document.querySelector('//div[@data-aura-class=\\\"forceInlineEditGrid\\\"]').scrollTop=500");
+		
 	}
 
 }
