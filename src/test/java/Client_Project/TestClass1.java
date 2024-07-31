@@ -50,28 +50,28 @@ public class TestClass1 extends BaseClass {
 	}
 
 	@Test(priority = 5)
-	public void CreateApp1() throws InterruptedException {
+	public void CreateApp1() throws Exception {
 		CreateApplicationPage1 cap1 = new CreateApplicationPage1(driver);
 		Thread.sleep(10000);
 		cap1.Createapp1();
 	}
 
 	@Test(priority = 6)
-	public void CreateApp2() throws InterruptedException, IOException {
+	public void CreateApp2() throws Exception {
 		CreateApplicationPage2 cap2 = new CreateApplicationPage2(driver);
 		Thread.sleep(10000);
 		cap2.Createapp2();
 	}
 
 	@Test(priority = 7)
-	public void CreateApp3() throws InterruptedException {
+	public void CreateApp3() throws Exception {
 		CreateApplicationPage3 cap3 = new CreateApplicationPage3(driver);
 		Thread.sleep(10000);
 		cap3.Creatapp3();
 	}
 
 	@Test(priority = 8)
-	public void CreateApp4() throws InterruptedException, IOException {
+	public void CreateApp4() throws Exception {
 		CreateApplicationPage4 cap4 = new CreateApplicationPage4(driver);
 		Thread.sleep(10000);
 		cap4.Createapp4();

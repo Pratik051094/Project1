@@ -79,7 +79,10 @@ public class CreateApplicationPage2 extends DropDown {
 		PhotoUpload.click();
 		Thread.sleep(2000);
 		Utiles.AutoItFileUpload();
+		ScrollContainer("//button[text()='Run POSIDEX']");
+		Thread.sleep(10000);
 		RunPOSIDEXButton.click();
+		Thread.sleep(20000);
 		Saveandnextbutton.click();
 	}
 }

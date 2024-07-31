@@ -24,7 +24,8 @@ public class ChooseYourFlowPage extends DropDown {
 	@FindBy(xpath = "//button[text()='Proceed']")
 	public WebElement ProceedButton;
 
-	public void FlowPage(){
+	public void FlowPage() throws InterruptedException{
+		Thread.sleep(5000);
 		NoButton.click();
 		ProceedButton.click();
 	}
