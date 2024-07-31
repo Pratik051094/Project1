@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utiles {
-	WebDriver driver;
+	 WebDriver driver;
 
 	public Utiles(WebDriver driver) {
 		this.driver = driver;
@@ -26,7 +26,7 @@ public class Utiles {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 	
-	public void AutoItFileUpload() throws IOException {
+	public static void AutoItFileUpload() throws IOException {
 		Runtime.getRuntime().exec(
 				"C:\\Users\\pmeher\\OneDrive - Planit Test Management Solutions Pty Ltd\\Documents\\FileUpload.exe");
 	}
@@ -53,5 +53,19 @@ public class Utiles {
 		
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", elm);
+	}
+public static void highlightElement(WebDriver driver,String ele) {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement tickethi=driver.findElement(By.xpath(ele));
+		 js.executeScript("arguments[0].setAttribute('style', 'border: 2px solid red;');",ele );
+	        try {
+	            Thread.sleep(1000); // Highlight for 1 second
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	        js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", ele);
+	        
+	        tickethi.click();
 	}
 }

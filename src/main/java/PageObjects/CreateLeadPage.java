@@ -26,7 +26,7 @@ public class CreateLeadPage extends DropDown {
 	private WebElement newLead;
 
 	public void CreateLead() {
-			Utiles.waitForElementToAppear(driver, By.xpath("//a[@id='1']"), Duration.ofSeconds(10));
+			//Utiles.waitForElementToAppear(driver, By.xpath("//a[@id='1']"), Duration.ofSeconds(10));
 			clickLead.click();
 			newLead.click();
 		}

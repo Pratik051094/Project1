@@ -5,8 +5,11 @@
     <classes>
       <class name="Client_Project.TestClass1">
         <methods>
+          <include name="CreateApp4"/>
+          <include name="CreateApp2"/>
+          <include name="CreateApp3"/>
           <include name="launchApplication"/>
-          <include name="Test1"/>
+          <include name="Flowpage"/>
         </methods>
       </class> <!-- Client_Project.TestClass1 -->
     </classes>

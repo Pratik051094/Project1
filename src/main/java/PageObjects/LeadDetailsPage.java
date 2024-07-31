@@ -5,14 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-<<<<<<< HEAD
+
+
+
 
 public class LeadDetailsPage extends DropDown {
 
-	WebDriver driver;
-=======
-public class LeadDetailsPage extends DropDown {
->>>>>>> dc39ef0f0565840e0e94a64ce2869deb693e4460
 
 	public WebDriver driver;
 
@@ -21,11 +19,8 @@ public class LeadDetailsPage extends DropDown {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> dc39ef0f0565840e0e94a64ce2869deb693e4460
-	@FindBy(xpath = "(//input[@class='slds-input'])[2]")
+@FindBy(xpath = "(//input[@class='slds-input'])[2]")
 	private WebElement fstName;
 
 	@FindBy(xpath = "(//input[@class='slds-input'])[6]")
@@ -41,9 +36,6 @@ public class LeadDetailsPage extends DropDown {
 	private WebElement leadDisp;
 
 	@FindBy(xpath = "//button[@class='slds-button slds-button_brand']")
-<<<<<<< HEAD
-	private WebDriver snp;
-=======
 	private WebElement snp;
 
 	public void ProductName(String name){
@@ -60,7 +52,7 @@ public class LeadDetailsPage extends DropDown {
 
 	public void LeadDetails(){
 		ProductName("Two Wheeler Loan");
-		fstName.sendKeys("Test1");
+		fstName.sendKeys("XYZ");
 		mobile.sendKeys("1234567899");
 		pinCode.sendKeys("400064");
 		LeadSource("Dealer");
@@ -68,6 +60,5 @@ public class LeadDetailsPage extends DropDown {
 		LeadDisposition("Interested");
 		snp.click();
 	}
->>>>>>> dc39ef0f0565840e0e94a64ce2869deb693e4460
 }
 

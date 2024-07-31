@@ -27,7 +27,7 @@ public class LoginPage extends DropDown {
 	
 	public void LoginIntoApp() {
 		usernameInput.sendKeys("unnati.mokal@rblbank.com.uat");	
-		passwordInput.sendKeys("Unnati@1234");
+		passwordInput.sendKeys("Welcome#123");
 		loginButton.click();
 		}
 

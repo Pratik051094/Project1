@@ -1,9 +1,14 @@
 package PageObjects;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import Client_Project.Utiles;
 
 public class CreateApplicationPage1 extends DropDown {
 	WebDriver driver;
@@ -35,7 +40,9 @@ public class CreateApplicationPage1 extends DropDown {
 		DrpDnAccess("Tenure (Months)", months);
 	}
 
-	public void Createapp1(){
+	public void Createapp1() throws InterruptedException{
+		//Utiles.waitForElementToAppear(driver,By.xpath("(//input[@class='slds-input'])[1]"),Duration.ofSeconds(10));
+		DealerCodeField.click();
 		DealerCodeField.sendKeys("DEASINGA");
 		RequestedLoanAmountField.sendKeys("100000");
 		Tenure("36");

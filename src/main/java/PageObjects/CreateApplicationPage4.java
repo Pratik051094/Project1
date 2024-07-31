@@ -1,9 +1,13 @@
 package PageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import Client_Project.Utiles;
 
 public class CreateApplicationPage4 extends DropDown {
 
@@ -68,11 +72,11 @@ public class CreateApplicationPage4 extends DropDown {
 		DrpDnAccess("Marital Status",mar);
 	}
 
-	public void Createapp4(){
+	public void Createapp4() throws IOException{
 		BioMetricKYCYesButton.click();
 		DocumentDropedown.click();
 		DocumentImageFront.click();
-		// autoIT //pratik ??
+		Utiles.AutoItFileUpload();
 		EnterAadhaarNumberField.sendKeys("0129876543");
 		VerifyButton.click();
 		Marital("Married");

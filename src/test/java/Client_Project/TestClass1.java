@@ -25,58 +25,62 @@ public class TestClass1 extends BaseClass {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.LoginIntoApp();
-<<<<<<< HEAD
+
 		WebElement con = driver.findElement(By.xpath("//div[@data-aura-class=\"forceInlineEditGrid\"]"));
-		
-=======
-		}
+
+	}
 
 	@Test(priority = 2)
 	public void LeadPageAccess() {
 		CreateLeadPage clp = new CreateLeadPage(driver);
 		clp.CreateLead();
->>>>>>> dc39ef0f0565840e0e94a64ce2869deb693e4460
+
 	}
 
 	@Test(priority = 3)
-	public void LeadFillDetails(){
+	public void LeadFillDetails() {
 		LeadDetailsPage ldp = new LeadDetailsPage(driver);
 		ldp.LeadDetails();
 	}
 
 	@Test(priority = 4)
-	public void ConvertToApplication(){
+	public void ConvertToApplication() {
 		LeadActions la = new LeadActions(driver);
 		la.ConvApp();
 	}
 
 	@Test(priority = 5)
-	public void CreateApp1(){
+	public void CreateApp1() throws InterruptedException {
 		CreateApplicationPage1 cap1 = new CreateApplicationPage1(driver);
+		Thread.sleep(10000);
 		cap1.Createapp1();
 	}
 
 	@Test(priority = 6)
-	public void CreateApp2(){
+	public void CreateApp2() throws InterruptedException, IOException {
 		CreateApplicationPage2 cap2 = new CreateApplicationPage2(driver);
+		Thread.sleep(10000);
 		cap2.Createapp2();
 	}
 
 	@Test(priority = 7)
-	public void CreateApp3(){
+	public void CreateApp3() throws InterruptedException {
 		CreateApplicationPage3 cap3 = new CreateApplicationPage3(driver);
+		Thread.sleep(10000);
 		cap3.Creatapp3();
 	}
 
 	@Test(priority = 8)
-	public void CreateApp4(){
+	public void CreateApp4() throws InterruptedException, IOException {
 		CreateApplicationPage4 cap4 = new CreateApplicationPage4(driver);
+		Thread.sleep(10000);
 		cap4.Createapp4();
 	}
 
 	@Test(priority = 9)
-	public void Flowpage(){
+	public void Flowpage() throws Exception {
 		ChooseYourFlowPage cyf = new ChooseYourFlowPage(driver);
+		Thread.sleep(10000);
 		cyf.FlowPage();
 	}
 }
