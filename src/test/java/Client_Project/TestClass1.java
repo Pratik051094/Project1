@@ -32,6 +32,9 @@ public class TestClass1 extends BaseClass {
 
 	@Test(priority = 2)
 	public void LeadPageAccess() {
+		WaitFramework pageLoadWait = new WaitFramework(driver, Duration.ofSeconds(20));
+        pageLoadWait.waitForPageToLoad();
+        
 		CreateLeadPage clp = new CreateLeadPage(driver);
 		clp.CreateLead();
 
@@ -39,12 +42,16 @@ public class TestClass1 extends BaseClass {
 
 	@Test(priority = 3)
 	public void LeadFillDetails() {
+		WaitFramework pageLoadWait = new WaitFramework(driver, Duration.ofSeconds(20));
+        pageLoadWait.waitForPageToLoad();
 		LeadDetailsPage ldp = new LeadDetailsPage(driver);
 		ldp.LeadDetails();
 	}
 
 	@Test(priority = 4)
 	public void ConvertToApplication() {
+		WaitFramework pageLoadWait = new WaitFramework(driver, Duration.ofSeconds(20));
+        pageLoadWait.waitForPageToLoad();
 		LeadActions la = new LeadActions(driver);
 		la.ConvApp();
 	}
