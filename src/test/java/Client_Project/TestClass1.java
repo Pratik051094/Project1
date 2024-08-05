@@ -1,12 +1,11 @@
 package Client_Project;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
+import PageObjects.AssetDetails;
+import PageObjects.BankVerification;
 import PageObjects.ChooseYourFlowPage;
 import PageObjects.CreateApplicationPage1;
 import PageObjects.CreateApplicationPage2;
@@ -15,7 +14,10 @@ import PageObjects.CreateApplicationPage4;
 import PageObjects.CreateLeadPage;
 import PageObjects.LeadActions;
 import PageObjects.LeadDetailsPage;
+import PageObjects.LoanEligibilityAndOffer;
 import PageObjects.LoginPage;
+import PageObjects.PermanentAddress_KYCAddressPage;
+import PageObjects.SocioEconomicDetails;
 import TestComponent.BaseClass;
 
 public class TestClass1 extends BaseClass {
@@ -26,7 +28,7 @@ public class TestClass1 extends BaseClass {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.LoginIntoApp();
 
-		WebElement con = driver.findElement(By.xpath("//div[@data-aura-class=\"forceInlineEditGrid\"]"));
+		//WebElement con = driver.findElement(By.xpath("//div[@data-aura-class=\"forceInlineEditGrid\"]"));
 
 	}
 
@@ -76,11 +78,49 @@ public class TestClass1 extends BaseClass {
 		Thread.sleep(10000);
 		cap4.Createapp4();
 	}
+	
+	@Test(priority =9)
+	public void ParmanentAdd() throws InterruptedException {
+		PermanentAddress_KYCAddressPage PA = new PermanentAddress_KYCAddressPage(driver);
+		Thread.sleep(10000);
+		PA.ParmanentAdd_Kycadd();
+	}
+	
+	@Test(priority =10)
+	public void SocioEconomicDetails() throws InterruptedException {
+		SocioEconomicDetails SE = new SocioEconomicDetails(driver);
+		Thread.sleep(10000);
+		SE.SocioEco();
+	}
+	
+	@Test(priority =11)
+	public void AssetDetails() throws InterruptedException {
+		AssetDetails AD = new AssetDetails(driver);
+		Thread.sleep(10000);
+		AD.AssetDetails();
+	}
+	
 
-	@Test(priority = 9)
+	@Test(priority = 12)
 	public void Flowpage() throws Exception {
 		ChooseYourFlowPage cyf = new ChooseYourFlowPage(driver);
 		Thread.sleep(10000);
 		cyf.FlowPage();
 	}
+	
+	@Test(priority = 13)
+	public void LoanEligibility() throws Exception {
+		LoanEligibilityAndOffer LA = new LoanEligibilityAndOffer(driver);
+		Thread.sleep(10000);
+		LA.LoanEligibilityAndOffer();
+	}
+	
+	@Test(priority = 14)
+	public void BankVerification() throws Exception {
+		BankVerification BV = new BankVerification(driver);
+		Thread.sleep(10000);
+		BV.BankVerification();
+	}
+	
+	
 }

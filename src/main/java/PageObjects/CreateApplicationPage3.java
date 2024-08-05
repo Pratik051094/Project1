@@ -26,18 +26,16 @@ public class CreateApplicationPage3 extends DropDown {
 
 	@FindBy(xpath = "//lightning-icon[@icon-name='utility:photo']")
 	public WebElement DeclarationForm;
-	
+
 	@FindBy(xpath = "//c-c-l-o-s-generic-file-uploader")
 	public WebElement PhotoUpload;
 
 	@FindBy(xpath = "//button[text()='Save & Next']")
 	public WebElement Saveandnextbutton;
 
-	public void Creatapp3() throws IOException, InterruptedException{
+	public void Creatapp3() throws IOException, InterruptedException {
 		Thread.sleep(5000);
 		CustomerConsentViaForm.click();
-		Thread.sleep(2000);
-		//DeclarationForm.click();
 		PhotoUpload.click();
 		Thread.sleep(5000);
 		Utiles.AutoItFileUpload();

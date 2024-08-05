@@ -1,6 +1,7 @@
 package Client_Project;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -27,8 +28,14 @@ public class Utiles {
     }
 	
 	public static void AutoItFileUpload() throws IOException {
+		String File = "C:\\Users\\pmeher\\eclipse-workspace\\RBL_Bank\\src\\main\\java\\Resoureces\\Demo.png";
+		File DynamicFile = new File(File);
+		//FileInputStream file1 = new FileInputStream(DynamicFile);
 		Runtime.getRuntime().exec(
-				"C:\\Users\\pmeher\\OneDrive - Planit Test Management Solutions Pty Ltd\\Documents\\FileUpload.exe");
+				
+				//"C:\\Users\\pmeher\\OneDrive - Planit Test Management Solutions Pty Ltd\\Documents\\FileUpload.exe"
+				//"C:\\Users\\pmeher\\eclipse-workspace\\RBL_Bank\\src\\main\\java\\Resoureces\\FileUpload.exe"
+				"C:\\Users\\pmeher\\eclipse-workspace\\RBL_Bank\\src\\main\\java\\Files\\ImgFileUpload.exe "+ DynamicFile);
 	}
 	
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
@@ -54,6 +61,8 @@ public class Utiles {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", elm);
 	}
+	
+	
 public static void highlightElement(WebDriver driver,String ele) {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;

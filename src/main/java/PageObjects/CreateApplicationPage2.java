@@ -1,9 +1,8 @@
 package PageObjects;
 
+import java.awt.Robot;
 import java.io.IOException;
-import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -63,7 +62,7 @@ public class CreateApplicationPage2 extends DropDown {
 		DrpDnAccess("Customer Category", cat);
 	}
 
-	public void Createapp2() throws IOException, InterruptedException{
+	public void Createapp2() throws IOException, InterruptedException {
 		CustoType("Salaried");
 		//CustoCategory("Salaried");
 		Profession("Individual Cash salaried");
@@ -77,6 +76,8 @@ public class CreateApplicationPage2 extends DropDown {
 		//Utiles.waitForElementToAppear(driver, By.xpath("//c-c-l-o-s-generic-file-uploader"), Duration.ofSeconds(10));
 		//Utiles.highlightElement(driver, "//c-c-l-o-s-generic-file-uploader");
 		PhotoUpload.click();
+		//ScrollContainer("//button[text()='Run POSIDEX']");
+		//PhotoUpload.sendKeys("C:\\Users\\pmeher\\eclipse-workspace\\RBL_Bank\\src\\main\\java\\Resoureces\\Demo.png");
 		Thread.sleep(2000);
 		Utiles.AutoItFileUpload();
 		ScrollContainer("//button[text()='Run POSIDEX']");

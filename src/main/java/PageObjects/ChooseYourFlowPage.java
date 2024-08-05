@@ -15,10 +15,10 @@ public class ChooseYourFlowPage extends DropDown {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "(//input[@name='default'])[2]")
+	@FindBy(xpath = "(//span[@class='slds-radio_faux'])[2]")
 	public WebElement NoButton;
 
-	@FindBy(xpath = "(//input[@name='default'])[1]")
+	@FindBy(xpath = "(//span[@class='slds-radio_faux'])[1]")
 	public WebElement YesButton;
 
 	@FindBy(xpath = "//button[text()='Proceed']")
@@ -27,6 +27,7 @@ public class ChooseYourFlowPage extends DropDown {
 	public void FlowPage() throws InterruptedException{
 		Thread.sleep(5000);
 		NoButton.click();
+		Thread.sleep(2000);
 		ProceedButton.click();
 	}
 }

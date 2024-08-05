@@ -28,4 +28,10 @@ public class DropDown {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", elm);
 	}
+	public void ScrollParent(String xpath){
+		WebElement element = driver.findElement(By.xpath(xpath));
+		
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
 }

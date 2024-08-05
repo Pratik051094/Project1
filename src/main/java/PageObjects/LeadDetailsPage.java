@@ -52,9 +52,9 @@ public class LeadDetailsPage extends DropDown {
 
 	public void LeadDetails(){
 		ProductName("Two Wheeler Loan");
-		fstName.sendKeys("ABC");
-		mobile.sendKeys("1234567899");
-		pinCode.sendKeys("400064");
+		fstName.sendKeys("TesterA");
+		mobile.sendKeys("9901219122");
+		pinCode.sendKeys("400004");
 		LeadSource("Dealer");
 		ScrollContainer("//button[@aria-label='Lead Disposition']");
 		LeadDisposition("Interested");

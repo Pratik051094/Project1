@@ -5,7 +5,7 @@
     <classes>
       <class name="Client_Project.TestClass1">
         <methods>
-          <include name="CreateApp4"/>
+          <include name="LoanEligibility"/>
           <include name="launchApplication"/>
           <include name="Flowpage"/>
         </methods>

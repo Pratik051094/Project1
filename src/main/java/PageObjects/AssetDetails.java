@@ -1,5 +1,6 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,9 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 public class AssetDetails extends DropDown {
 	WebDriver driver;
 
-	AssetDetails(WebDriver driver) {
+	public AssetDetails(WebDriver driver) {
 
 		super(driver);
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -45,6 +47,9 @@ public class AssetDetails extends DropDown {
 		DrpDnAccess("Two Wheeler Manufacturer", bike);
 	}
 
+	@FindBy(xpath = "//button[text()='Save & Next']")
+	public WebElement Saveandnextbutton;
+	
 	public void Type(String typ){
 		DrpDnAccess( "Two Wheeler Type", typ);
 	}
@@ -56,4 +61,39 @@ public class AssetDetails extends DropDown {
 	public void Variant(String var){
 		DrpDnAccess("Variant", var);
 	}
+	
+	public void EngineCC(String var){
+		DrpDnAccess("EngineCC", var);
+	}
+	
+	public void Electric(String var){
+		DrpDnAccess("Electric", var);
+	}
+	
+	public void VehicleCategory(String var){
+		DrpDnAccess("VehicleCategory", var);
+	}
+	public void ModelOne() {
+		driver.findElement(By.xpath("//*[@name='Model']")).click();
+		WebElement we = driver.findElement(By.xpath("//*[@name='Model']"));
+		we.findElement(By.xpath("(//*[@data-value='Hunter 350'])[1]")).click();
+	}
+	
+	public void AssetDetails() throws InterruptedException {
+		Thread.sleep(5000);
+		Type("Motorcycle");
+		Thread.sleep(2000);
+		ModelOne();
+		Thread.sleep(2000);
+		Variant("Retro Factory");
+		Thread.sleep(2000);
+		ExShowroomPriceField.sendKeys("120000");
+		RTOChargesField.sendKeys("10000");
+		InsuranceAmountField.sendKeys("1000");
+		MandatoryAccessoriesAmountField.sendKeys("0");
+		OtherRegistrationChargesField.sendKeys("0");
+		Saveandnextbutton.click();
+		//*[@data-value="Retro Factory"]
+	}
+	
 }
